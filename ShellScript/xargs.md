@@ -26,6 +26,16 @@ $ echo {a..g}.txt | xargs -p
 a.txt b.txt c.txt d.txt e.txt f.txt g.txt
 ```
 
+## `-n`オプション
+
+`-n数字`と指定すると、入力された文字列を指定された数字の数だけずつコマンドの引数に渡す。
+
+```console
+$ seq 5 | xargs -n3 echo
+1 2 3
+4 5
+```
+
 ## 参考
 
 - [【 xargs 】コマンド――コマンドラインを作成して実行する](https://atmarkit.itmedia.co.jp/ait/articles/1801/19/news014.html)
