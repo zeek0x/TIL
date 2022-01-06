@@ -36,7 +36,16 @@ $ seq 5 | xargs -n3 echo
 4 5
 ```
 
+## `-I`オプション
+
+`-I変数名`と指定すると、`xargs`コマンドの引数の文字列の中で変数を展開することができる。
+
+```console
+$ echo Medium | xargs -I@ echo 'Small @ Large'
+```
+
 ## 参考
 
 - [【 xargs 】コマンド――コマンドラインを作成して実行する](https://atmarkit.itmedia.co.jp/ait/articles/1801/19/news014.html)
 - [【Linux】xargs コマンドの使い方がよく分からない](https://techblog.kyamanak.com/entry/2018/02/12/202256)
+- [1日1問、半年以内に習得 シェル・ワンライナー160本ノック](https://gihyo.jp/book/2021/978-4-297-12267-6)
