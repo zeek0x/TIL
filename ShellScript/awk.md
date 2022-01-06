@@ -1,5 +1,9 @@
 # awk コマンド
 
+## 基本的な構文
+
+[とほほのAWK入門](https://www.tohoho-web.com/ex/awk.html)が参照しやすくてよい。
+
 ## awkによる検索と計算
 
 ```console
@@ -53,4 +57,3 @@ seq 5 | awk 'BEGIN{a=0}$1%2==0{print $1,"偶数"}$1%2{print $1,"奇数"}{a+=$1}E
 ## 参考
 
 [1日1問、半年以内に習得 シェル・ワンライナー160本ノック](https://gihyo.jp/book/2021/978-4-297-12267-6)
-
