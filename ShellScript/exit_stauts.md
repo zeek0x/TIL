@@ -1,9 +1,20 @@
 # 終了ステータス
 
-[パイプしたときの終了ステータスの取得方法
-](https://qiita.com/zackey2/items/1221d44ab4ced84dad1c)
+終了ステータス（リターンコードともいう）
 
-## 上記記事で知らなかったこと
+|終了ステータス|意味|
+|---|---|
+|0|正常終了|
+|1|一般的なエラー|
+|2|ビルトインコマンドの誤用または構文エラー|
+|126|コマンドを実行できなかった|
+|127|コマンドが見つからなかった|
+|128|`exit`に不正な値を渡した|
+|128+n|シグナルnで終了|
+|255|範囲外の終了ステータス|
 
-- Bashによる終了ステータスの予約は意外と少ない
-- パイプ時の終了ステータス配列：`PIPESTATUS`
+# 参考
+
+- [Exit status](https://en.wikipedia.org/wiki/Exit_status)
+- [終了ステータス](https://ja.wikipedia.org/wiki/%E7%B5%82%E4%BA%86%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9)
+- [Appendix E. Exit Codes With Special Meanings](https://tldp.org/LDP/abs/html/exitcodes.html)
