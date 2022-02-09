@@ -45,14 +45,6 @@ grep コマンドでは、正規表現形式を指定して文字列を検索す
 |`-G`|`--basic-regexp`|PATTERNを基本正規表現(BRE)として扱う。これがデフォルトとなる|
 |`-P`|`--perl-regexp`|PATTERNをPerl互換の正規表現(PCRE)として扱う|
 
-## grep による回分の検出
-
-```console
-$ str="たけやぶやけた"
-$ echo $str | grep -xf <(echo $str)
-たけやぶやけた
-```
-
 ## 参考
 
 - [1日1問、半年以内に習得 シェル・ワンライナー160本ノック](https://gihyo.jp/book/2021/978-4-297-12267-6)
