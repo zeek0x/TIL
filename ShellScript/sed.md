@@ -61,6 +61,20 @@ $ echo -e 'うんち\nく' | sed -zE 's/うんち\nく/蘊蓄/'
 蘊蓄
 ```
 
+## 正規表現アドレス
+
+正規表現アドレス`/regex/`を配置すると`regex`にマッチした行のみがコマンドの対象となる。またアドレスとコマンドの間に`!`を配置するとマッチしなかった行のみがコマンドの対象となる。
+
+```console
+$ echo -e 'abc\ndef' | sed '/e/s/.*/xyz/'
+abc
+xyz
+$ echo -e 'abc\ndef' | sed '/e/!s/.*/xyz/'
+xyz
+def
+```
+
 ## 参考
 
-[1日1問、半年以内に習得 シェル・ワンライナー160本ノック](https://gihyo.jp/book/2021/978-4-297-12267-6)
+- [1日1問、半年以内に習得 シェル・ワンライナー160本ノック](https://gihyo.jp/book/2021/978-4-297-12267-6)
+- [Man page of SED](https://linuxjm.osdn.jp/html/GNU_sed/man1/sed.1.html)
