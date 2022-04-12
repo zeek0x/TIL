@@ -54,6 +54,22 @@ seq 5 | awk 'BEGIN{a=0}$1%2==0{print $1,"偶数"}$1%2{print $1,"奇数"}{a+=$1}E
 合計 15
 ```
 
+現在の行のフィールド数（`NF`(Number of Fileds)変数）・レコード番号（`NR`(Number of Records)変数）を扱える。
+
+```console
+$ cat <<EOF | awk 'NF > 1'
+1
+2 3
+4 5 6
+EOF
+2 3
+4 5 6
+$ seq 5 | awk 'NR > 2'
+3
+4
+5
+```
+
 日付のようなフォーマットは、文字列比較で扱えるケースがある。
 
 ```console
