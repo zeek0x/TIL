@@ -1,6 +1,6 @@
 # sed コマンド
 
-## sed による置換
+## 置換
 
 ```console
 $ echo クロロエチルエチルエーテル | sed 's/エ/メ/'
@@ -41,9 +41,51 @@ $ echo クロロメチルエチルエーテル | sed -E 's/(メチル)(エチル
 
 `-r`, `-E`, `--regex-extended` オプションを指定すると拡張正規表現(ERE: Extended Reuglar Exression)を使用する。
 
+
+## 挿入
+
+`{n}i{str}`の形式の`i`コマンドで`n`行目の前に、`{n}a{str}`の形式の`a`コマンドで`n`行目の後に`str`文字列の行を挿入できる。
+全体の行数が`n`に満たない場合、挿入は無視される。
+
+```console
+$ echo -e 'AAA\nBBB\nCCC' | sed 2iXXX
+AAA
+XXX
+BBB
+CCC
+$ echo -e 'AAA\nBBB\nCCC' | sed 2aXXX
+AAA
+BBB
+XXX
+CCC
+$ echo 'AAA' | sed 2iXXX
+AAA
+$ echo 'AAA' | sed 2aXXX
+AAA
+```
+
+範囲指定も可能である。
+
+```console
+$ echo -e 'AAA\nBBB\nCCC' | sed 2,3iXXX
+AAA
+XXX
+BBB
+XXX
+CCC
+$ echo -e 'AAA\nBBB\nCCC' | sed 2,3aXXX
+AAA
+BBB
+XXX
+CCC
+XXX
+```
+
 ## `-e`オプション
 
-`sed`コマンドは位置引数を`sed script input-file`のように解釈する。`-e`(`--expression`)オプションを指定することでスクリプトであることを明示できる。複数指定した場合は前方から適用される。
+`sed`コマンドは位置引数を`sed script input-file`のように解釈する。
+`-e`(`--expression`)オプションを指定することでスクリプトであることを明示できる。
+複数指定した場合は前方から適用される。
 
 ```console
 $ seq 3 | sed -e 's/[1-3]/4/' -e 's/4/5/'
@@ -84,6 +126,7 @@ $ echo -e 'abc\ndef' | sed '/e/!s/.*/xyz/'
 xyz
 def
 ```
+
 
 ## 参考
 
