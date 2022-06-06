@@ -34,3 +34,4 @@ $ echo 'obase=16; ibase=16; 10' | bc
 # 参考
 
 - [Man page of bc](https://linuxjm.osdn.jp/html/GNU_bc/man1/bc.1.html)
+- [コマンドライン上で手軽に16進計算](https://qiita.com/tachesimazzoca/items/9c52aad0ff4d28b40324)
