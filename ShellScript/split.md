@@ -58,6 +58,17 @@ $ du -h *
 24K	file.11
 ```
 
+## 結合
+
+結合には `cat` コマンドを用いる。
+
+```console
+$ cat file.* > cat_file
+$ md5sum file cat_file
+b6d81b360a5672d80c27430f39153e2c  file
+b6d81b360a5672d80c27430f39153e2c  cat_file
+```
+
 # 参考
 
 - [Man page of SPLIT](https://linuxjm.osdn.jp/html/GNU_coreutils/man1/split.1.html)
