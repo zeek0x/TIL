@@ -93,7 +93,7 @@ $ cat log.txt | awk '{t_str=$(NF-1)" "$(NF); if ("[01/Dec/2021 09:00:00]"<=t_str
 192.168.0.8 Lunch. [01/Dec/2021 12:29:22]
 ```
 
-awk 内から外部コマンドを扱える。
+`awk` 内から外部コマンドを扱える。
 
 ```console
 $ cat a.txt
@@ -106,7 +106,20 @@ $ cat a.txt | awk '{"date -d \""$1" +6 day\" \"+%F %a\"" | getline t; print t}'
 2022-03-07 月
 ```
 
-yes　コマンドと組み合わせるとループとインクリメントの処理が楽にかける。
+リダイレクトを用いてファイルに書き込むことができる。
+
+```console
+$ seq 5 | awk '{print $0 > ($0%2?"odd":"even")}'
+$ cat odd
+1
+3
+5
+$ cat even
+2
+4
+```
+
+`yes` コマンドと組み合わせるとループとインクリメントの処理が楽にかける。
 
 ```console
 $ yes | awk '{print NR}10<NR{exit}'
