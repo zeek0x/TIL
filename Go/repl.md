@@ -3,8 +3,8 @@
 Go　の REPL(Read-Eval-Print Loop) 環境を構築する。
 
 ```console
-$ go get github.com/x-motemen/gore/cmd/gore
-$ go get github.com/k0kubun/pp
+$ go install github.com/x-motemen/gore/cmd/gore@latest
+$ go install github.com/k0kubun/pp@latest
 ```
 
 - [x-motemen/gore](github.com/x-motemen/gore): Yet another Go REPL that works nicely. Featured with line editing, code completion, and more.
