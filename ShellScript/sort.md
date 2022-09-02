@@ -13,13 +13,16 @@
 
 |オプション|説明|
 |---|---|
-|`-b`|行頭空白の無視|
-|`-d`|電話帳順でソート|
-|`-f`|大文字・小文字無視|
-|`-i`|印字可能でない文字を無視|
-|`-n`|数値文字列として比較|
-|`-r`, `--reverse`|逆順にソート|
+|`-b`, `--ignore-leading-blanks`|行頭空白の無視|
+|`-d`, `--dictionary-order`|辞書順でソート|
+|`-f`, `--ignore-case`|大文字・小文字無視|
+|`-i`, `--ignore-nonprinting`|印字可能でない文字を無視|
 |`-M`|月の名称の省略形とみなしてソート|
+|`-h`, `--human-numeric-sort`|人間が読むことができる形式でソート（例: 2K 1G)|
+|`-n`, `--numeric-sort`|数値文字列として比較|
+|`-R`, `--random-sort`|シャッフル|
+|`-r`, `--reverse`|逆順にソート|
+
 
 ## その他
 
@@ -56,3 +59,4 @@ sort -k3,3n
 # 引用元
 
 - [Man page of SORT](https://linuxjm.osdn.jp/html/gnumaniak/man1/sort.1.html)
+- [sort(1) - Linux manual page](https://man7.org/linux/man-pages/man1/sort.1.html)
