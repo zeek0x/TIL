@@ -45,6 +45,15 @@ grep コマンドでは、正規表現形式を指定して文字列を検索す
 |`-G`|`--basic-regexp`|PATTERNを基本正規表現(BRE)として扱う。これがデフォルトとなる|
 |`-P`|`--perl-regexp`|PATTERNをPerl互換の正規表現(PCRE)として扱う|
 
+## 先読みと後読み
+
+|名前|パターン|例|
+|---|---|---|
+|肯定的先読み|`(?=pattern)`|`foo(?=bar)`|
+|否定的先読み|`(?!pattern)`|`foo(?!bar)`|
+|肯定的後読み|`(?<=pattern)`|`(?<=bar)foo`|
+|否定的後読み|`(?<!pattern)`|`(?<!bar)foo`|
+
 ## 漢字の抽出
 
 ```console
@@ -60,3 +69,4 @@ Unicode　ではおおよそ漢字が「一」と「龠」の間に入ってい�
 
 - [1日1問、半年以内に習得 シェル・ワンライナー160本ノック](https://gihyo.jp/book/2021/978-4-297-12267-6)
 - [GREP](https://linuxjm.osdn.jp/html/GNU_grep/man1/grep.1.html)
+- [正規表現の先読み・後読みを極める！](https://abicky.net/2010/05/30/135112/)
