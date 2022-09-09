@@ -12,8 +12,7 @@ func ReadJson[T any](path string) (ret *T, err error) {
 		return ret, err
 	}
 
-	ret = new(T)
-	if err = json.Unmarshal(data, ret); err != nil {
+	if err := json.Unmarshal(data, ret); err != nil {
 		return ret, err
 	}
 	return ret, nil
