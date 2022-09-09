@@ -5,7 +5,7 @@
 - `Unmarshal` 関数を用いる方法
 
 ```go
-func ReadJson[T any](path string) (ret *T, Error error) {
+func ReadJson[T any](path string) (ret *T, err error) {
 	data, err := os.ReadFile(path)
 
 	if err != nil {
@@ -23,7 +23,7 @@ func ReadJson[T any](path string) (ret *T, Error error) {
 - `NewDecoder`を用いる方法
 
 ```go
-func ReadJson[T any](path string) (ret *T, Error error) {
+func ReadJson[T any](path string) (ret *T, err error) {
 	file, err := os.Open(path)
 	if err != nil {
 		return nil, err
