@@ -53,6 +53,19 @@ $ echo '123-456' | grep -P '(...)-(?1)'
 123-456
 ```
 
+## キャプチャ
+
+>CAPTURING
+>
+>         (...)           capture group
+>         (?<name>...)    named capture group (Perl)
+>         (?'name'...)    named capture group (Perl)
+>         (?P<name>...)   named capture group (Python)
+>         (?:...)         non-capture group
+>         (?|...)         non-capture group; reset group numbers for
+>                          capture groups in each alternative
+
 # 参考
 
-[PCRE: Perl Compatible Regular Expressions](https://theriault.github.io/pcre-syntax/)
+- [PCRE: Perl Compatible Regular Expressions](https://theriault.github.io/pcre-syntax/)
+- [PCRE2 - Perl-compatible regular expressions (revised API)](https://www.pcre.org/pcre2.txt)
