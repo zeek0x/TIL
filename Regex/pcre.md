@@ -1,5 +1,18 @@
 # PCRE
 
+## キャプチャ
+
+>CAPTURING
+>
+>         (...)           capture group
+>         (?<name>...)    named capture group (Perl)
+>         (?'name'...)    named capture group (Perl)
+>         (?P<name>...)   named capture group (Python)
+>         (?:...)         non-capture group
+>         (?|...)         non-capture group; reset group numbers for
+>                          capture groups in each alternative
+
+
 ## 後方参照(Backreference)
 
 `(?<name>pattern)`という形式でキャプチャ内の正規表現でマッチした"値"を、後方から `\g{name}`という形式で指定できる。
@@ -53,17 +66,12 @@ $ echo '123-456' | grep -P '(...)-(?1)'
 123-456
 ```
 
-## キャプチャ
+## 非キャプチャグループ
 
->CAPTURING
->
->         (...)           capture group
->         (?<name>...)    named capture group (Perl)
->         (?'name'...)    named capture group (Perl)
->         (?P<name>...)   named capture group (Python)
->         (?:...)         non-capture group
->         (?|...)         non-capture group; reset group numbers for
->                          capture groups in each alternative
+```console
+$ echo abcabc | grep -P '(?:a)(?:b)(c)ab\1'
+abcabc
+```
 
 # 参考
 
