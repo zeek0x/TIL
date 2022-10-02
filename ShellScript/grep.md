@@ -45,14 +45,7 @@ grep コマンドでは、正規表現形式を指定して文字列を検索す
 |`-G`|`--basic-regexp`|PATTERNを基本正規表現(BRE)として扱う。これがデフォルトとなる|
 |`-P`|`--perl-regexp`|PATTERNをPerl互換の正規表現(PCRE)として扱う|
 
-## 先読みと後読み
-
-|名前|パターン|例|
-|---|---|---|
-|肯定的先読み|`(?=pattern)`|`foo(?=bar)`|
-|否定的先読み|`(?!pattern)`|`foo(?!bar)`|
-|肯定的後読み|`(?<=pattern)`|`(?<=bar)foo`|
-|否定的後読み|`(?<!pattern)`|`(?<!bar)foo`|
+PECRについては [pcre](../Regex/pcre.md) 参照
 
 ## 漢字の抽出
 
