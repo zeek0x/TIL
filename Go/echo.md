@@ -32,7 +32,7 @@ func main() {
 ```
 
 ```console
-$ curl -v -G -d 'id=123' --data-urlencode 'name=!@#$%^&*()_+|\=-' 'localhost:1323'
+$ curl -v -G -d 'id=123' --data-urlencode 'name=!@#$%^&*()_+|\=-' 'localhost:1323' | jq
 *   Trying ::1:1323...
 * connect to ::1 port 1323 failed: Connection refused
 *   Trying 127.0.0.1:1323...
@@ -48,6 +48,9 @@ $ curl -v -G -d 'id=123' --data-urlencode 'name=!@#$%^&*()_+|\=-' 'localhost:132
 < Date: Tue, 04 Oct 2022 12:40:41 GMT
 < Content-Length: 43
 < 
-{"ID":123,"Name":"!@#$%^\u0026*()_+|\\=-"}
 * Connection #0 to host localhost left intact
+{
+  "ID": 123,
+  "Name": "!@#$%^&*()_+|\\=-"
+}
 ```
