@@ -7,6 +7,15 @@
 - `-` で標準入力を入力として扱う
 
 ```console
+$ cat fruits.txt
+apple
+banana
+orange
+peach
+$ cat price.txt
+100
+200
+300
 $ echo -e "yummy\nyummy\nnot bad\namazing" | paste -d ',' fruits.txt price.txt -
 apple,100,yummy
 banana,200,yummy
