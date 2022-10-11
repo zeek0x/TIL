@@ -33,7 +33,17 @@ af
 |繰り返し文字|`[y*3]`|`yyy`|
 |文字クラス|`alnum`|`abc..xyz123..789`|
 
-## ROT13
+## Tips
+
+## 指定した文字集合以外を消去
+
+`-dc`
+
+```console
+$ cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -b10 | head
+```
+
+### ROT13
 
 ```console
 $ echo Caesar Cipher | tr 'a-zA-Z' 'n-za-mN-ZA-M'
@@ -44,4 +54,4 @@ Caesar Cipher
 
 # 参考
 
-- ![Man page of TR](https://linuxjm.osdn.jp/html/GNU_textutils/man1/tr.1.html)
+- [Man page of TR](https://linuxjm.osdn.jp/html/GNU_textutils/man1/tr.1.html)
