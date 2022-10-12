@@ -23,6 +23,8 @@ orange,300,not bad
 peach,,amazing
 ```
 
+行列転置
+
 ```console
 $ cat tableinfo.txt
 id INT
