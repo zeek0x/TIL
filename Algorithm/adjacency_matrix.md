@@ -20,4 +20,8 @@ E = [
 ]
 ```
 
-無向グラフの場合は i, j が True な場合に j, i を True になればいい。
+無向グラフの場合は `i`, `j` が `True` な場合に `j`, `i` を True にすればいい。
+
+## 例題
+
+- https://atcoder.jp/contests/past201912-open/tasks/past201912_e
