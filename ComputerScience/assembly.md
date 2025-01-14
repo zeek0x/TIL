@@ -7,4 +7,4 @@
     mov rbp, rsp
 ```
 
-関数呼び出し時に呼び出し元の位置である rbp をスタックに保存し、現在のスタックトップである rsp を rbp とすることでスタックポイントを更新する（rbp, rsp は [register.md](./regsiter.md) を参照）。
+関数呼び出し時に呼び出し元の位置である rbp をスタックに保存し、現在のスタックトップである rsp を rbp とすることでスタックポイントを更新する（rbp, rsp は [register.md](./register.md) を参照）。
