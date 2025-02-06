@@ -9,3 +9,4 @@
 | Egress | 特定のネットワークに「出る」流れを指す |
 | Half-width, Full-Width | 半角・全角 | 
 | OOB (Out-of-Band) | 通常の通信経路とは異なる経路や方法で情報を送受信すること ↔︎ In Band |
+| Flat Binary | メタ情報を持たないバイナリ |
