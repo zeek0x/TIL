@@ -1,10 +1,13 @@
 # 命令
 
 | 命令 | 名称 | 構文 | 説明 |
-| --- | --- | --- | --- |
-| lea | Load Effective Address | `lea dst src` | src のメモリアドレス式（有効アドレス、Effective Address）の計算結果を、 dst のレジスタにロードする |
-| in  |	Input | `in reg port` | I/Oポート(port で指定されるアドレス) からデータを読み込み、reg で指定されたレジスタに格納する。読み込むデータサイズはレジスタに依存（例: al=8bit, ax=16bit, eax=32bit）する|
-| out | Output | `out port reg` | reg で指定されたレジスタの内容を、I/Oポート（port で指定されるアドレス）に書き出す。書き出すデータサイズはレジスタに依存する |
+|------|------|------|------|
+| hlt | Halt                  | `hlt`          | CPUを停止（アイドル）状態にし、割り込みが発生するまで待機する |
+| lea | Load Effective Address | `lea dst, src` | src のメモリアドレス式（有効アドレス）を計算して、dst レジスタに格納する |
+| in  | Input                 | `in dst, port` | 指定されたI/Oポート（port）から dst レジスタへ値を入力する |
+| out | Output                | `out port, src`| 指定されたI/Oポートに src レジスタの値を書き込む |
+| cli | Clear Interrupt       | `cli`          | 割り込みを禁止する（割り込みフラグをクリア）|
+| sti | Set Interrupt         | `sti`          | 割り込みを許可する（割り込みフラグをセット）|
 
 # 関数プロローグ
 
