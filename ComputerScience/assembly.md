@@ -9,6 +9,7 @@
 | cli | Clear Interrupt       | `cli`          | 割り込みを禁止する（割り込みフラグをクリア）|
 | sti | Set Interrupt         | `sti`          | 割り込みを許可する（割り込みフラグをセット）|
 | call| Call Procedure        | `call target`  | 指定されたアドレス (target) にジャンプし、戻りアドレスをスタックに格納する（関数呼び出しに使用）|
+| ret | Return                | `ret`          | スタックに保存された戻りアドレスを取り出し、そのアドレスへ制御を戻す（関数からの戻りに使用）|
 
 # 関数プロローグ
 
